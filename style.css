@@ -1285,7 +1285,50 @@
 		        	color: #a09888;
 		        }
 
-		/* ---------- LOCATION / MAP SECTION ---------- */
+		/* ---------- FIND TABLE CTA ---------- */
+.find-table-cta {
+	text-align: center;
+	padding: 2.5rem 1.5rem 0;
+}
+
+.find-table-desc {
+	font-size: clamp(0.95rem, 1.8vw, 1.1rem);
+	color: #8a7e6b;
+	margin-bottom: 2rem;
+	transition: color 1.5s ease;
+}
+
+body.night-mode .find-table-desc {
+	color: #a09888;
+}
+
+.find-table-btn {
+	display: inline-block;
+	text-decoration: none;
+	padding: 0.85rem 3rem;
+	border-radius: 999px;
+	background-color: #3f5e88;
+	color: #fff;
+	font-family: 'Cormorant Garamond', 'Noto Serif Georgian', serif;
+	font-size: 1.1rem;
+	font-weight: 600;
+	letter-spacing: 0.06em;
+	cursor: pointer;
+	transition: background-color 1.5s ease, color 1.5s ease, transform 0.2s ease, box-shadow 0.2s ease;
+	box-shadow: 0 4px 18px rgba(63, 94, 136, 0.25);
+}
+
+.find-table-btn:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 8px 24px rgba(63, 94, 136, 0.35);
+}
+
+body.night-mode .find-table-btn {
+	background-color: #c9b26e;
+	color: #1a1230;
+}
+
+/* ---------- LOCATION / MAP SECTION ---------- */
 		.location-section {
 			padding: clamp(4rem, 10vw, 7rem) 1.5rem;
 			background-color: #f7f2ea;

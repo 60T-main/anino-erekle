@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ka">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>მაგიდის პოვნა - ერეკლე & ანინო</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Noto+Serif+Georgian:wght@400;500;600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="find-table.css">
+    </head>
+    <body>
+
+        <!-- HEADER -->
+        <header class="ft-header">
+            <a href="index.html" class="ft-back">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="15 18 9 12 15 6"/>
+                </svg>
+                მოწვევაზე დაბრუნება
+            </a>
+            <p class="ft-eyebrow">ერეკლე & ანინო · 9 მაისი, 2026</p>
+            <h1 class="ft-title">იპოვე შენი მაგიდა</h1>
+            <p class="ft-sub">ჩაწერე სახელი და იპოვე შენი მაგიდა</p>
+        </header>
+
+        <!-- SEARCH -->
+        <div class="ft-search-wrap">
+            <div class="ft-search-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"/>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                </svg>
+                <input
+                    type="text"
+                    class="ft-search-input"
+                    id="ft-search"
+                    placeholder="სახელი და გვარი..."
+                    autocomplete="off"
+                    autocorrect="off"
+                    spellcheck="false"
+                >
+                <button class="ft-clear" id="ft-clear" aria-label="გასუფთავება">✕</button>
+            </div>
+        </div>
+
+        <div class="ft-divider"></div>
+
+        <!-- SEARCH RESULTS -->
+        <div class="ft-results" id="ft-results">
+            <p class="ft-results-label" id="ft-results-label">შედეგები</p>
+            <div id="ft-results-list"></div>
+        </div>
+
+        <!-- VENUE MAP -->
+        <section class="ft-map-section">
+            <button class="ft-map-toggle" id="ft-map-toggle" aria-expanded="false">
+                <span class="ft-map-label" id="ft-map-label">დარბაზის განლაგება</span>
+                <svg class="ft-map-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"/>
+                </svg>
+            </button>
+            <div class="ft-map-wrap" id="ft-map-wrap">
+                <svg class="ft-map-svg" viewBox="0 0 420 730" xmlns="http://www.w3.org/2000/svg">
+
+                    <!-- Stage -->
+                    <g class="ft-map-stage">
+                        <rect x="148" y="16" width="124" height="40" rx="8"/>
+                        <text x="210" y="41">სცენა</text>
+                    </g>
+
+
+                    <!-- ===== COL A – far left (x=45) : 13 11 9 7 5 3 1 ===== -->
+                    <g id="map-13" class="ft-map-table"><circle cx="45" cy="130" r="23"/><text x="45" y="130">13</text></g>
+                    <g id="map-11" class="ft-map-table"><circle cx="45" cy="215" r="23"/><text x="45" y="215">11</text></g>
+                    <g id="map-9"  class="ft-map-table"><circle cx="45" cy="300" r="23"/><text x="45" y="300">9</text></g>
+                    <g id="map-7"  class="ft-map-table"><circle cx="45" cy="385" r="23"/><text x="45" y="385">7</text></g>
+                    <g id="map-5"  class="ft-map-table"><circle cx="45" cy="470" r="23"/><text x="45" y="470">5</text></g>
+                    <g id="map-3"  class="ft-map-table"><circle cx="45" cy="555" r="23"/><text x="45" y="555">3</text></g>
+                    <g id="map-1"  class="ft-map-table"><circle cx="45" cy="640" r="23"/><text x="45" y="640">1</text></g>
+
+                    <!-- ===== COL B – inner left (x=128) staggered : 12 10 8 6 4 2 ===== -->
+                    <g id="map-12" class="ft-map-table"><circle cx="128" cy="172" r="23"/><text x="128" y="172">12</text></g>
+                    <g id="map-10" class="ft-map-table"><circle cx="128" cy="257" r="23"/><text x="128" y="257">10</text></g>
+                    <g id="map-8"  class="ft-map-table"><circle cx="128" cy="342" r="23"/><text x="128" y="342">8</text></g>
+                    <g id="map-6"  class="ft-map-table"><circle cx="128" cy="427" r="23"/><text x="128" y="427">6</text></g>
+                    <g id="map-4"  class="ft-map-table"><circle cx="128" cy="512" r="23"/><text x="128" y="512">4</text></g>
+                    <g id="map-2"  class="ft-map-table"><circle cx="128" cy="597" r="23"/><text x="128" y="597">2</text></g>
+
+                    <!-- ===== COL C – inner right (x=292) staggered : 24 22 20 18 16 14 ===== -->
+                    <g id="map-24" class="ft-map-table"><circle cx="292" cy="172" r="23"/><text x="292" y="172">24</text></g>
+                    <g id="map-22" class="ft-map-table"><circle cx="292" cy="257" r="23"/><text x="292" y="257">22</text></g>
+                    <g id="map-20" class="ft-map-table"><circle cx="292" cy="342" r="23"/><text x="292" y="342">20</text></g>
+                    <g id="map-18" class="ft-map-table"><circle cx="292" cy="427" r="23"/><text x="292" y="427">18</text></g>
+                    <g id="map-16" class="ft-map-table"><circle cx="292" cy="512" r="23"/><text x="292" y="512">16</text></g>
+                    <g id="map-14" class="ft-map-table"><circle cx="292" cy="597" r="23"/><text x="292" y="597">14</text></g>
+
+                    <!-- ===== COL D – far right (x=375) : 26 25 23 21 19 17 15 ===== -->
+                    <g id="map-26" class="ft-map-table"><circle cx="375" cy="130" r="23"/><text x="375" y="130">26</text></g>
+                    <g id="map-25" class="ft-map-table"><circle cx="375" cy="215" r="23"/><text x="375" y="215">25</text></g>
+                    <g id="map-23" class="ft-map-table"><circle cx="375" cy="300" r="23"/><text x="375" y="300">23</text></g>
+                    <g id="map-21" class="ft-map-table"><circle cx="375" cy="385" r="23"/><text x="375" y="385">21</text></g>
+                    <g id="map-19" class="ft-map-table"><circle cx="375" cy="470" r="23"/><text x="375" y="470">19</text></g>
+                    <g id="map-17" class="ft-map-table"><circle cx="375" cy="555" r="23"/><text x="375" y="555">17</text></g>
+                    <g id="map-15" class="ft-map-table"><circle cx="375" cy="640" r="23"/><text x="375" y="640">15</text></g>
+
+
+                </svg>
+            </div>
+        </section>
+
+        <!-- ALL TABLES -->
+        <section class="ft-tables-section" id="ft-tables-section">
+            <p class="ft-tables-label">ყველა მაგიდა</p>
+            <div class="ft-tables-grid" id="ft-tables-grid">
+                <!-- filled by JS -->
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="ft-footer">
+            <a href="https://www.instagram.com/weddsites/" target="_blank" rel="noopener" class="ft-footer-credit">
+                <img src="weddsite.png" alt="Weddsite" class="ft-footer-logo">
+                <span>Made with ♥ by Weddsite</span>
+            </a>
+        </footer>
+
+        <script src="guests.js"></script>
+        <script>
+            // ---- Build all-tables grid ----
+            var grid = document.getElementById('ft-tables-grid');
+            var tableNums = Object.keys(TABLES).map(Number).sort(function(a,b){return a-b;});
+
+            tableNums.forEach(function(num) {
+                var card = document.createElement('div');
+                card.className = 'ft-table-card';
+
+                var heading = document.createElement('div');
+                heading.className = 'ft-table-num';
+                heading.textContent = 'მაგიდა ' + num;
+                card.appendChild(heading);
+
+                var ul = document.createElement('ul');
+                ul.className = 'ft-table-guests';
+                TABLES[num].forEach(function(guest) {
+                    var li = document.createElement('li');
+                    li.textContent = guest;
+                    ul.appendChild(li);
+                });
+                card.appendChild(ul);
+                grid.appendChild(card);
+            });
+
+            // ---- Map toggle ----
+            var mapToggle = document.getElementById('ft-map-toggle');
+            var mapWrap = document.getElementById('ft-map-wrap');
+            var mapLabel = document.getElementById('ft-map-label');
+
+            mapToggle.addEventListener('click', function() {
+                var open = mapWrap.classList.toggle('open');
+                mapToggle.setAttribute('aria-expanded', open);
+            });
+
+            function highlightTablesOnMap(found) {
+                document.querySelectorAll('.ft-map-table').forEach(function(el) {
+                    el.classList.remove('highlighted');
+                    el.classList.add('dimmed');
+                });
+                found.forEach(function(num) {
+                    var el = document.getElementById('map-' + num);
+                    if (el) {
+                        el.classList.remove('dimmed');
+                        el.classList.add('highlighted');
+                    }
+                });
+                mapLabel.textContent = 'დარბაზის განლაგება';
+            }
+
+            function clearMapHighlights() {
+                document.querySelectorAll('.ft-map-table').forEach(function(el) {
+                    el.classList.remove('highlighted', 'dimmed');
+                });
+                mapLabel.textContent = 'დარბაზის განლაგება';
+            }
+
+            // ---- Search logic ----
+            var searchInput = document.getElementById('ft-search');
+            var clearBtn = document.getElementById('ft-clear');
+            var resultsWrap = document.getElementById('ft-results');
+            var resultsList = document.getElementById('ft-results-list');
+            var resultsLabel = document.getElementById('ft-results-label');
+            var tablesSection = document.getElementById('ft-tables-section');
+
+            function normalize(str) {
+                return str.toLowerCase().trim();
+            }
+
+            function highlight(text, query) {
+                if (!query) return document.createTextNode(text);
+                var idx = normalize(text).indexOf(normalize(query));
+                if (idx === -1) return document.createTextNode(text);
+                var span = document.createElement('span');
+                span.appendChild(document.createTextNode(text.slice(0, idx)));
+                var mark = document.createElement('mark');
+                mark.textContent = text.slice(idx, idx + query.length);
+                span.appendChild(mark);
+                span.appendChild(document.createTextNode(text.slice(idx + query.length)));
+                return span;
+            }
+
+            function doSearch(query) {
+                resultsList.innerHTML = '';
+                var q = normalize(query);
+
+                if (!q) {
+                    resultsWrap.classList.remove('visible');
+                    tablesSection.style.display = '';
+                    clearBtn.classList.remove('visible');
+                    clearMapHighlights();
+                    return;
+                }
+
+                clearBtn.classList.add('visible');
+                var matches = GUESTS.filter(function(g) {
+                    return normalize(g.name).indexOf(q) !== -1;
+                });
+
+                tablesSection.style.display = 'none';
+                resultsWrap.classList.add('visible');
+
+                if (matches.length === 0) {
+                    var noRes = document.createElement('div');
+                    noRes.className = 'ft-no-results';
+                    noRes.innerHTML = 'სახელი ვერ მოიძებნა.<br>სცადეთ სხვანაირად.';
+                    resultsList.appendChild(noRes);
+                    resultsLabel.textContent = 'შედეგი ვერ მოიძებნა';
+                    clearMapHighlights();
+                    return;
+                }
+
+                resultsLabel.textContent = 'ნაპოვნია · ' + matches.length + ' სტუმარი';
+
+                matches.forEach(function(g) {
+                    var item = document.createElement('div');
+                    item.className = 'ft-result-item';
+
+                    var nameEl = document.createElement('div');
+                    nameEl.className = 'ft-result-name';
+                    nameEl.appendChild(highlight(g.name, query));
+
+                    var tableEl = document.createElement('div');
+                    tableEl.className = 'ft-result-table';
+                    tableEl.textContent = 'მაგიდა ' + g.table;
+
+                    item.appendChild(nameEl);
+                    item.appendChild(tableEl);
+                    resultsList.appendChild(item);
+                });
+
+                // Highlight found table(s) on map and open it
+                var foundTables = matches.map(function(g) { return g.table; });
+                highlightTablesOnMap(foundTables);
+                mapWrap.classList.add('open');
+                mapToggle.setAttribute('aria-expanded', 'true');
+            }
+
+            searchInput.addEventListener('input', function() {
+                doSearch(this.value);
+            });
+
+            clearBtn.addEventListener('click', function() {
+                searchInput.value = '';
+                doSearch('');
+                searchInput.focus();
+            });
+
+            setTimeout(function() {
+                searchInput.focus();
+            }, 300);
+        </script>
+    </body>
+</html>

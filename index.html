@@ -41,7 +41,7 @@
                     </h1>
                     <p class="hero-date">9 მაისი, 2026</p>
                     <p class="hero-location">ქუთაისი, საქართველო</p>
-                    <a href="#rsvp" class="hero-cta">დაადასტურეთ დასწრება</a>
+                    <a href="find-table.html" class="hero-cta">იპოვე შენი მაგიდა</a>
                 </section>
                 <!-- NAVBAR -->
                 <nav class="navbar">
@@ -54,7 +54,7 @@
                                 <a href="#timeline">დღის გეგმა</a>
                             </li>
                             <li>
-                                <a href="#rsvp">დადასტურება</a>
+                                <a href="find-table.html">მაგიდა</a>
                             </li>
                             <li>
                                 <a href="#location">ლოკაცია</a>
@@ -100,7 +100,7 @@
                     <button class="mobile-menu-close" id="mobile-menu-close" aria-label="დახურვა">&#x2715;</button>
                     <a href="#top">მთავარი</a>
                     <a href="#timeline">დღის გეგმა</a>
-                    <a href="#rsvp">დადასტურება</a>
+                    <a href="find-table.html">მაგიდა</a>
                     <a href="#location">ლოკაცია</a>
                 </div>
                 <!-- MESSAGE FROM US -->
@@ -176,69 +176,14 @@
                         </div>
                     </div>
                 </section>
-                <!-- RSVP -->
+                <!-- FIND YOUR TABLE -->
                 <section class="rsvp-section" id="rsvp">
                     <div class="reveal">
-                        <p class="section-label">დადასტურება</p>
                         <div class="section-divider"></div>
-                        <h2 class="section-heading">დაადასტურეთ დასწრება</h2>
+                        <h2 class="section-heading">შენი მაგიდა</h2>
                     </div>
-                    <div class="rsvp-form-wrapper reveal">
-                        <form class="rsvp-form" id="rsvp-form" novalidate>
-                            <div class="rsvp-field">
-                                <label class="rsvp-label" for="rsvp-name">სახელი და გვარი</label>
-                                <input
-                                    class="rsvp-input"
-                                    type="text"
-                                    id="rsvp-name"
-                                    name="name"
-                                    placeholder="თქვენი სახელი"
-                                    required
-                                >
-                            </div>
-                            <div class="rsvp-field">
-                                <label class="rsvp-label">დასწრება</label>
-                                <div class="rsvp-radio-group">
-                                    <div class="rsvp-radio-card">
-                                        <input
-                                            type="radio"
-                                            name="attendance"
-                                            id="rsvp-yes"
-                                            value="yes"
-                                            required
-                                        >
-                                        <label for="rsvp-yes">✓&nbsp;&nbsp;დავესწრები</label>
-                                    </div>
-                                    <div class="rsvp-radio-card">
-                                        <input
-                                            type="radio"
-                                            name="attendance"
-                                            id="rsvp-no"
-                                            value="no"
-                                        >
-                                        <label for="rsvp-no">✕&nbsp;&nbsp;ვერ დავესწრები</label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="rsvp-field">
-                                <label class="rsvp-label" for="rsvp-guests">თანმხლები პირების რაოდენობა</label>
-                                <input
-                                    class="rsvp-input"
-                                    type="number"
-                                    id="rsvp-guests"
-                                    name="guests"
-                                    min="0"
-                                    max="10"
-                                    placeholder="0"
-                                >
-                            </div>
-                            <button type="submit" class="rsvp-submit">გაგზავნა</button>
-                        </form>
-                        <div class="rsvp-success" id="rsvp-success">
-                            <div class="rsvp-success-icon">✦</div>
-                            <h3>გმადლობთ!</h3>
-                            <p>თქვენი პასუხი მიღებულია!</p>
-                        </div>
+                    <div class="find-table-cta reveal">
+                        <a href="find-table.html" class="rsvp-submit find-table-btn">იპოვე შენი მაგიდა</a>
                     </div>
                 </section>
                 <!-- LOCATION / MAP -->
@@ -523,23 +468,6 @@
                 if (e.key === 'Escape') closePopup();
             });
 
-            // RSVP form
-            var rsvpForm = document.getElementById('rsvp-form');
-            var rsvpSuccess = document.getElementById('rsvp-success');
-            var rsvpMealField = document.getElementById('rsvp-meal-field');
-
-            document.querySelectorAll('input[name="attendance"]').forEach(function (radio) {
-                radio.addEventListener('change', function () {
-                    rsvpMealField.style.display = this.value === 'yes' ? 'flex' : 'none';
-                });
-            });
-            rsvpMealField.style.display = 'none';
-
-            rsvpForm.addEventListener('submit', function (e) {
-                e.preventDefault();
-                rsvpForm.style.display = 'none';
-                rsvpSuccess.classList.add('visible');
-            });
         </script>
     </body>
 </html>
